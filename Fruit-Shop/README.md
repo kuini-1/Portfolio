@@ -12,3 +12,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 This project was made with React.js, Tailwind CSS, and TypeScript.
+LIVE PREVIEW: [http://15.235.145.158:3000/]
