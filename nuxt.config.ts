@@ -100,7 +100,7 @@ export default defineNuxtConfig({
   css: [
     'primeicons/primeicons.css',
     '@sfxcode/formkit-primevue/dist/sass/formkit-primevue.scss',
-    '@/assets/app.css',
+    '~_nuxt/assets/app.css',
   ],
 
   build: {
