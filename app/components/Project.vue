@@ -31,7 +31,7 @@ defineProps({
   <div class="group relative overflow-hidden rounded-xl transition-all duration-300 hover:scale-[1.02] w-4/5">
     <img 
       class="h-[300px] w-full object-cover rounded-xl shadow-lg transition-all duration-500 group-hover:brightness-[0.15]" 
-      :src="'_nuxt/assets/' + imagePath" 
+      :src="imagePath" 
       :alt="name"
     >
     <div class="absolute inset-0 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
