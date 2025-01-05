@@ -1,9 +1,4 @@
 <script setup>
-// import { useAuthStore } from '@/stores/authStore';
-// import { useRouter } from 'vue-router';
-
-// const router = useRouter();
-// const authStore = useAuthStore();
 
 const mode = useColorMode({
   emitAuto: true,
@@ -15,9 +10,6 @@ const mode = useColorMode({
 
 onMounted(() => {
   mode.value = 'dark';
-  // authStore.fetchUser();
-  // if (!authStore.user.username)
-  //   router.push('/login');
 });
 
 useHead({
