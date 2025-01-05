@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm run build",
+  "outputDirectory": ".output/public",
+  "framework": "nuxt",
+  "ignoreCommand": "pnpm dlx nuxt-skip-build"
+} 
