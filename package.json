@@ -4,11 +4,11 @@
   "version": "2.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "nuxi build",
-    "dev": "nuxi dev",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
     "info": "nuxi info",
-    "generate": "nuxi generate",
-    "preview": "nuxi preview",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "module": "nuxi init -t module my-module",
     "lint": "eslint ./app",
     "lint:fix": "eslint --fix ./app",
@@ -58,6 +58,8 @@
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
   "dependencies": {
     "@prisma/client": "5.17.0",
-    "cookie-universal-nuxt": "^2.2.2"
+    "cookie-universal-nuxt": "^2.2.2",
+    "nuxt": "^3.x.x",
+    "@nuxt/kit": "^3.x.x"
   }
 }
