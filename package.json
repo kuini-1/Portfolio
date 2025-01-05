@@ -59,7 +59,6 @@
   "dependencies": {
     "@prisma/client": "5.17.0",
     "cookie-universal-nuxt": "^2.2.2",
-    "nuxt": "^3.x.x",
-    "@nuxt/kit": "^3.x.x"
+    "@nuxt/kit": "^3.12.4"
   }
 }
