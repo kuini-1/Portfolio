@@ -80,11 +80,7 @@ const scrollToSection = (section) => {
                   'Node.js',
                   'Python',
                   'C#',
-                  'Express',
-                  'FastAPI',
                   'REST APIs',
-                  'GraphQL',
-                  'MVC Architecture'
                 ]"
               />
               <SkillCategory
