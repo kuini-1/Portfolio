@@ -22,7 +22,7 @@ const scrollToSection = (section) => {
 <template>
   <div class="surface-0">
     <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-zinc-900 to-zinc-800">
-      <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+      <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
       <div class="relative z-10 text-center px-4">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">
           Matthew Creamer
@@ -99,7 +99,7 @@ const scrollToSection = (section) => {
               />
               <SkillCategory
                 title="Tools"
-                icon="pi pi-tools"
+                icon="pi pi-wrench"
                 :skills="[
                   'Git',
                   'VS Code',
