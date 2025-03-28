@@ -11,6 +11,8 @@ export default defineNuxtConfig({
         },
       ],
     },
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/',
   },
   future: {
     compatibilityVersion: 4,
@@ -19,6 +21,12 @@ export default defineNuxtConfig({
 
   ssr: true,
   devtools: { enabled: true },
+
+  nitro: {
+    routeRules: {
+      '/**': { cors: true }
+    }
+  },
 
   runtimeConfig: {
     public: {
