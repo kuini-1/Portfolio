@@ -33,9 +33,9 @@ defineProps({
 
 <template>
   <div class="group relative overflow-hidden rounded-2xl bg-zinc-800 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/20">
-    <div class="relative h-[300px] overflow-hidden">
+    <div class="relative h-[300px] overflow-hidden flex items-center justify-center mt-2">
       <img 
-        class="h-full w-full object-cover transition-all duration-500 group-hover:scale-110" 
+        class="h-full w-auto object-cover transition-all duration-500 group-hover:scale-110" 
         :src="imagePath" 
         :alt="name"
       >
@@ -44,7 +44,7 @@ defineProps({
     
     <div class="p-6">
       <h3 class="text-2xl font-bold text-zinc-100 mb-3">{{ name }}</h3>
-      <p class="text-zinc-400 mb-4">{{ description }}</p>
+      <p class="text-zinc-400 mb-4 h-[100px]">{{ description }}</p>
       
       <div class="flex flex-wrap gap-2 mb-6">
         <span 

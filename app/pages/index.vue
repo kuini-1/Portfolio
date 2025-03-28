@@ -63,7 +63,9 @@ const scrollToSection = (section) => {
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full blur-3xl opacity-20"></div>
-            <img class="w-[300px] h-[300px] rounded-full mx-auto relative z-10 border-4 border-emerald-500" src="/profile.jpeg" alt="Matthew Creamer">
+            <div class="w-[300px] h-[300px] rounded-full relative z-10 border-4 border-emerald-500 bg-white overflow-hidden flex items-center justify-center">
+              <img class="w-auto h-full object-cover" src="/profile.jpg" alt="Matthew Creamer">
+            </div>
           </div>
           <div class="space-y-6">
             <p class="text-zinc-300 text-lg leading-relaxed">
@@ -145,6 +147,14 @@ const scrollToSection = (section) => {
             githubUrl="https://github.com/kuini-1/inventory-management"
             demoUrl="https://inventory-management-alpha-six.vercel.app/login"
             :tags="['Next.js', 'Tailwind', 'Shadcn', 'PostgreSQL', 'Prisma']"
+          />
+          <Project 
+            name="Table Editor"
+            description="The Table Editor is a powerful platform allowing Owners to manage over 60 game tables with full CRUD functionality. Owners can assign roles to Sub Owners, control table access, and create new Sub Owners. Stripe integration ensures access to premium features for Owners, enabling seamless management of permissions and data."
+            imagePath="table-editor.png"
+            githubUrl="https://github.com/kuini-1/table-editor-1.0"
+            demoUrl="https://inventory-management-alpha-six.vercel.app/login"
+            :tags="['Next.js', 'Tailwind', 'Radix UI', 'Shadcn', 'Supabase', 'Stripe']"
           />
         </div>
       </div>
