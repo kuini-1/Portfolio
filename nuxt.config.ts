@@ -31,7 +31,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@primevue/nuxt-module',
-    '@unocss/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/content',
     '@vueuse/nuxt',
@@ -41,21 +40,6 @@ export default defineNuxtConfig({
     '@formkit/nuxt',
     // 'cookie-universal-nuxt',
   ],
-
-  unocss: {
-    safelist: [
-      'w-1/10',
-      'w-2/10',
-      'w-3/10',
-      'w-4/10',
-      'w-5/10',
-      'w-6/10',
-      'w-7/10',
-      'w-8/10',
-      'w-9/10',
-      'w-10/10',
-    ],
-  },
 
   formkit: {
     autoImport: true,
