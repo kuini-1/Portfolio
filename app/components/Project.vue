@@ -1,4 +1,8 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 defineProps({
   name: {
     type: String,
@@ -57,13 +61,13 @@ defineProps({
            :href="githubUrl" 
            target="_blank"
            class="flex-1 px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors duration-300 flex items-center justify-center gap-2 font-medium">
-          <i class="pi pi-github"></i>View Code
+          <i class="pi pi-github"></i>{{ t('viewCode') }}
         </a>
         <a v-if="demoUrl" 
            :href="demoUrl" 
            target="_blank"
            class="flex-1 px-4 py-2 bg-zinc-700 text-zinc-100 rounded-lg hover:bg-zinc-600 transition-colors duration-300 flex items-center justify-center gap-2 font-medium">
-          <i class="pi pi-external-link"></i>Live Demo
+          <i class="pi pi-external-link"></i>{{ t('liveDemo') }}
         </a>
       </div>
     </div>

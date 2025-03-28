@@ -1,0 +1,17 @@
+{
+  "aboutMe": "私について",
+  "myProjects": "私のプロジェクト",
+  "contactMe": "私に連絡する",
+  "aboutMeDescription": "私は美しい機能的なウェブサイトを作ることに情熱を持っている全スタックのウェブ開発者です。私は両方のフロントエンドとバックエンドの開発に強固な基礎を持っており、常に新しい挑戦と成長の機会を探しています。",
+  "frontend": "フロントエンド",
+  "backend": "バックエンド",
+  "database": "データベース",
+  "tools": "ツール",
+  "featuredProjects": "特集プロジェクト",
+  "viewCode": "コードを見る",
+  "liveDemo": "ライブデモ",
+  "getInTouch": "お問い合わせ",
+  "contactDescription": "常に新しい挑戦と成長の機会を探しています。どんな質問でもお気軽にお問い合わせください。",
+  "inventoryManagement": "インベントリ管理",
+  "inventoryManagementDescription": "リアルタイムのトラッキング、ユーザー認証、高度な分析を備えた包括的なインベントリ管理システム。"
+}

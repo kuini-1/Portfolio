@@ -76,7 +76,8 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     locales: [
       { code: 'en', file: 'en.json', name: 'English' },
-      { code: 'de', file: 'de.json', name: 'German' },
+      { code: 'th', file: 'th.json', name: 'ไทย' },
+      { code: 'jp', file: 'jp.json', name: '日本語' },
     ],
     vueI18n: './vue-i18n.options.ts',
   },

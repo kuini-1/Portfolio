@@ -1,4 +1,7 @@
 <script setup lang='js'>
+import { useI18n } from 'vue-i18n';
+
+const { t, locale, setLocale } = useI18n();
 const aboutSection = ref(null);
 const projectSection = ref(null);
 const contactSection = ref(null);
@@ -22,24 +25,41 @@ const scrollToSection = (section) => {
 <template>
   <div class="surface-0">
     <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-zinc-900 to-zinc-800">
-      <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
+      <div class="absolute top-4 right-4 z-20">
+        <Dropdown
+          v-model="locale"
+          :options="[
+            { label: 'English', value: 'en', icon: '🇺🇸' },
+            { label: 'ไทย', value: 'th', icon: '🇹🇭' },
+            { label: '日本語', value: 'jp', icon: '🇯🇵' }
+          ]"
+          optionLabel="label"
+          class="w-[150px] bg-zinc-800 border border-zinc-700"
+          :placeholder="locale === 'en' ? '🇺🇸 English' : locale === 'th' ? '🇹🇭 ไทย' : '🇯🇵 日本語'"
+          @update:modelValue="(option) => setLocale(option.value)"
+        >
+          <template #option="{ option }">
+            <span>{{ option.icon }} {{ option.label }}</span>
+          </template>
+        </Dropdown>
+      </div>
+    <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
       <div class="relative z-10 text-center px-4">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">
           Matthew Creamer
         </h1>
         <p class="text-xl md:text-2xl text-zinc-300 mb-8">Full-Stack Web Developer</p>
         <div class="flex flex-wrap justify-center gap-4">
-          <Button @click="scrollToSection('about')" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-full" icon="pi pi-user" label="About Me" />
-          <Button @click="scrollToSection('project')" class="bg-transparent border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white px-8 py-3 rounded-full" icon="pi pi-folder" label="My Projects" />
-          <Button @click="scrollToSection('contact')" class="bg-transparent border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white px-8 py-3 rounded-full" icon="pi pi-envelope" label="Contact" />
+          <Button @click="scrollToSection('about')" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-full" icon="pi pi-user" :label="t('aboutMe')" />
+          <Button @click="scrollToSection('project')" class="bg-transparent border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white px-8 py-3 rounded-full" icon="pi pi-folder" :label="t('myProjects')" />
+          <Button @click="scrollToSection('contact')" class="bg-transparent border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white px-8 py-3 rounded-full" icon="pi pi-envelope" :label="t('contactMe')" />
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
     <section ref="aboutSection" class="min-h-screen py-20 bg-zinc-900">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">About Me</h2>
+        <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">{{ t('aboutMe') }}</h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full blur-3xl opacity-20"></div>
@@ -47,8 +67,7 @@ const scrollToSection = (section) => {
           </div>
           <div class="space-y-6">
             <p class="text-zinc-300 text-lg leading-relaxed">
-              I'm a passionate full-stack web developer with expertise in modern web technologies. 
-              I create responsive, user-friendly applications that solve real-world problems.
+              {{ t('aboutMeDescription') }}
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <SkillCategory
@@ -117,11 +136,11 @@ const scrollToSection = (section) => {
 
     <section ref="projectSection" class="min-h-screen py-20 bg-zinc-800">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">Featured Projects</h2>
+        <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">{{ t('featuredProjects') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Project 
-            name="Inventory Management"
-            description="A comprehensive inventory management system with real-time tracking, user authentication, and advanced analytics."
+            :name="t('inventoryManagement')"
+            :description="t('inventoryManagementDescription')"
             imagePath="inventory-management.png"
             githubUrl="https://github.com/kuini-1/inventory-management"
             demoUrl="https://inventory-management-alpha-six.vercel.app/login"
@@ -133,7 +152,7 @@ const scrollToSection = (section) => {
 
     <section ref="contactSection" class="min-h-screen py-20 bg-zinc-900">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">Get In Touch</h2>
+        <h2 class="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500">{{ t('getInTouch') }}</h2>
         <div class="max-w-2xl mx-auto">
           <div class="bg-zinc-800 p-8 rounded-xl">
             <div class="flex flex-col items-center gap-6">
@@ -149,7 +168,7 @@ const scrollToSection = (section) => {
                 </a>
               </div>
               <p class="text-zinc-300 text-center">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                {{ t('contactDescription') }}
               </p>
             </div>
           </div>
