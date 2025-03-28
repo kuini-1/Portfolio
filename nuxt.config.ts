@@ -3,7 +3,6 @@ import pkg from './package.json'
 
 export default defineNuxtConfig({
   app: {
-    baseURL: '/Portfolio/',
     head: {
       link: [
         {
@@ -11,11 +10,6 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap',
         },
       ],
-    },
-  },
-  nitro: {
-    prerender: {
-      routes: ['/'],
     },
   },
   future: {
