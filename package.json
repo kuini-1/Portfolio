@@ -4,7 +4,7 @@
   "version": "2.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "nuxt build",
+    "build": "NUXT_APP_BASE_URL=/Portfolio/ npx nuxt build --preset github_pages",
     "dev": "nuxt dev",
     "info": "nuxi info",
     "generate": "nuxt generate",
