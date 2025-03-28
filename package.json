@@ -8,6 +8,7 @@
     "dev": "nuxt dev",
     "info": "nuxi info",
     "generate": "nuxt generate",
+    "pages": "npx gh-pages -d dist",
     "preview": "nuxt preview",
     "module": "nuxi init -t module my-module",
     "lint": "eslint ./app",
