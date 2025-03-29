@@ -58,8 +58,9 @@
   },
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
   "dependencies": {
+    "@nuxt/kit": "^3.12.4",
     "@prisma/client": "5.17.0",
-    "cookie-universal-nuxt": "^2.2.2",
-    "@nuxt/kit": "^3.12.4"
+    "@vueuse/motion": "^3.0.3",
+    "cookie-universal-nuxt": "^2.2.2"
   }
 }

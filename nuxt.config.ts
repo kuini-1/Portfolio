@@ -47,6 +47,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/fonts',
     '@formkit/nuxt',
+    '@vueuse/motion/nuxt',
     // 'cookie-universal-nuxt',
   ],
 
