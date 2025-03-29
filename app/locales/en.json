@@ -13,5 +13,7 @@
   "getInTouch": "Get In Touch",
   "contactDescription": "I am always looking for new challenges and opportunities to grow. If you have any questions or would like to get in touch, please don't hesitate to contact me.",
   "inventoryManagement": "Inventory Management",
-  "inventoryManagementDescription": "A comprehensive inventory management system with real-time tracking, user authentication, and advanced analytics."
+  "inventoryManagementDescription": "A comprehensive inventory management system with real-time tracking, user authentication, and advanced analytics.",
+  "tableEditor": "Table Editor",
+  "tableEditorDescription": "The Table Editor is a powerful platform allowing Owners to manage over 60 game tables with full CRUD functionality. Owners can assign roles to Sub Owners, control table access, and create new Sub Owners. Stripe integration ensures access to premium features for Owners, enabling seamless management of permissions and data."
 }

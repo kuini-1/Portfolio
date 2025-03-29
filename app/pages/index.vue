@@ -220,8 +220,8 @@ const scrollToSection = (section) => {
             v-motion
             :initial="{ opacity: 0, y: 50 }"
             :visible="{ opacity: 1, y: 0, transition: { duration: 800, ease: 'easeOut', delay: 400 } }"
-            name="Table Editor"
-            description="The Table Editor is a powerful platform allowing Owners to manage over 60 game tables with full CRUD functionality. Owners can assign roles to Sub Owners, control table access, and create new Sub Owners. Stripe integration ensures access to premium features for Owners, enabling seamless management of permissions and data."
+            :name="t('tableEditor')"
+            :description="t('tableEditorDescription')"
             imagePath="table-editor.png"
             githubUrl="https://github.com/kuini-1/table-editor-1.0"
             demoUrl="https://inventory-management-alpha-six.vercel.app/login"
