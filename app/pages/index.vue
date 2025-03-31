@@ -224,7 +224,7 @@ const scrollToSection = (section) => {
             :description="t('tableEditorDescription')"
             imagePath="table-editor.png"
             githubUrl="https://github.com/kuini-1/table-editor-1.0"
-            demoUrl="https://inventory-management-alpha-six.vercel.app/login"
+            demoUrl="https://table-editor-1-0.vercel.app"
             :tags="['Next.js', 'Tailwind', 'Radix UI', 'Shadcn', 'Supabase', 'Stripe']"
           />
         </div>
