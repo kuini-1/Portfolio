@@ -1,0 +1,19 @@
+name: Deploy
+on:
+  workflow_call
+    
+jobs:
+  deploy:
+    runs-on: matt-vm
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: .output/public
+
+      - name: Deploy
+        run: |
+          sudo cp -r .output/public/* /var/www/html/
+          sudo rm -rf .output/public
+          sudo systemctl restart nginx
