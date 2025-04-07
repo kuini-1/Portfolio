@@ -3,6 +3,7 @@ on:
   workflow_call:
     inputs:
       node-version:
+        type: string
         required: true
         default: 22
 
