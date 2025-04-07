@@ -1,0 +1,37 @@
+name: Prepare Action
+description: Prepare an action for CICD
+
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    required: true
+    default: '22'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'pnpm'
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+
+    - name: Install dependencies
+      run: pnpm install
+      shell: bash
+
+    - name: Cache dependencies
+      uses: actions/cache@v4
+      with:
+        key: ${{ runner.os }}-node-${{ inputs.node-version }}-${{ github.pipeline }}-${{ github.ref }}
+        path: node_modules
+        restore-keys: |
+          ${{ runner.os }}-node-${{ inputs.node-version }}-${{ github.pipeline }}-${{ github.ref }}
+        override: true
+        expire-after: 1 hour
