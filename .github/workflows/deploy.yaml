@@ -14,6 +14,6 @@ jobs:
 
       - name: Deploy
         run: |
-          sudo cp -r .output/public/* /var/www/html/
+          sudo cp -r .output/public/* /home/matt/myportfolio/
           sudo rm -rf .output/public
           sudo systemctl restart nginx
