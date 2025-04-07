@@ -4,15 +4,13 @@ description: Prepare an action for CICD
 inputs:
   node-version:
     description: 'Node.js version to use'
+    type: string
     required: true
     default: '22'
 
 runs:
   using: 'composite'
   steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
@@ -20,6 +18,7 @@ runs:
 
     - name: Install pnpm
       run: npm install -g pnpm
+      shell: bash
 
     - name: Install dependencies
       run: pnpm install
