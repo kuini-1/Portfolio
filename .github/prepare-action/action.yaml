@@ -31,5 +31,3 @@ runs:
         path: node_modules
         restore-keys: |
           ${{ runner.os }}-node-${{ inputs.node-version }}-${{ github.pipeline }}-${{ github.ref }}
-        override: true
-        expire-after: 1 hour
